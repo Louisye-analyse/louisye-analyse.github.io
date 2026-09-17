@@ -53,16 +53,22 @@ const ARTICLES = [
     resume: "La décision de la CIJ sur Mbanié, Conga et Cocotiers soulève d’importants enjeux maritimes et économiques pour le Gabon. Cette note en analyse les implications juridiques et le bilan territorial, en mer comme sur terre."
   },
   {
+    titre: "Déguerpissements urbains à Libreville : Entre brutalité étatique et absence de gouvernance foncière durable",
+    date: "2025-06-04",
+    fichier: "articles/2025-04-06-Deguerpissement-a-Libreville.pdf",
+    resume: "Les démolitions à Libreville révèlent les défaillances de la régularisation foncière et le manque de protection des habitants. Cette note examine les responsabilités publiques et propose six étapes pour un aménagement respectueux des droits des populations."
+  },
+  {
     titre: "Décentralisation au Gabon : Un tournant graduel à réussir pour bâtir une gouvernance de proximité",
     date: "2025-06-20",
     fichier: "articles/2025-06-20-Decentralisation-au-gabon.pdf",
     resume: "Le Gabon affiche depuis juin 2025 une volonté de concrétiser la décentralisation. Mais sans moyens financiers, humains et réglementaires, le transfert de compétences risque de maintenir une autonomie purement symbolique des collectivités."
   },
-   {
-    titre: "Déguerpissements urbains à Libreville : Entre brutalité étatique et absence de gouvernance foncière durable",
-    date: "2025-06-04",
-    fichier: "articles/2025-04-06-Deguerpissement-a-Libreville.pdf",
-    resume: "Les démolitions à Libreville révèlent les défaillances de la régularisation foncière et le manque de protection des habitants. Cette note examine les responsabilités publiques et propose six étapes pour un aménagement respectueux des droits des populations."
+    {
+    titre: "Des outils pleins les tiroirs,mais des villes sans mode d'emploi : Ce que valent vraiment les instruments d'aménagement du territoire au Gabon",
+    date: "2025-06-26",
+    fichier: "articles/2025-06-26-Amenagement-outils.pdf",
+    resume: "Les déguerpissements à Libreville et à Port-Gentil révèlent le décalage entre les outils d’aménagement affichés et la réalité urbaine. Malgré les plans existants, l’urbanisation improvisée et les inondations persistent."
   },
   {
     titre: "Taxe d'habitation : un choix centralisé : Qui collecte, pour quel territoire, et avec quels outils ?",
