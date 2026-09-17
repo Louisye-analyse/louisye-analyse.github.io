@@ -82,4 +82,10 @@ const ARTICLES = [
     fichier: "articles/24-10-2025-CIM-mangroves.pdf",
     resume: "Le projet d’adhésion du Gabon au Centre international des mangroves soulève une question : quels moyens pour traduire cet engagement en actions concrètes ? Cette note interroge le risque d’une nouvelle institution sans impact réel sur la protection des mangroves."
   },
+  {
+    titre: "l'argent du Gabon en 2026 ? :Un budget record entre ambition et déséquilibres persistants",
+    date: "2025-12-10",
+    fichier: "articles/2025-12-10-PLF2026-argent-public.pdf",
+    resume: "Le PLF 2026 du Gabon privilégie les grands investissements, largement financés par la dette, au détriment des secteurs sociaux. Une masse salariale élevée accentue le déséquilibre entre priorités politiques et besoins des services publics."
+  },
 ];
