@@ -88,4 +88,10 @@ const ARTICLES = [
     fichier: "articles/2025-12-10-PLF2026-argent-public.pdf",
     resume: "Le PLF 2026 du Gabon privilégie les grands investissements, largement financés par la dette, au détriment des secteurs sociaux. Une masse salariale élevée accentue le déséquilibre entre priorités politiques et besoins des services publics."
   },
+  {
+    titre: "Une gestion des risques d'inondation, inondée d'incohérences : Libreville face à l'illusion de l'action publique",
+    date: "2026-01-29",
+    fichier: "articles/2026-01-29-gestion-des-risques -Inondations.pdf",
+    resume: "Les inondations à Libreville révèlent une gestion des risques centrée sur l’urgence et la communication. Malgré des causes connues, les réponses restent ponctuelles, sans prévention durable ni réforme de la gouvernance territoriale."
+  },
 ];
