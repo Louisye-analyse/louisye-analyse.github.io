@@ -46,4 +46,11 @@ const ARTICLES = [
     fichier: "articles/2025-05-20-Regularisation-fonciere.pdf",
     resume: "Au Gabon, la lenteur, l’opacité et le coût des procédures foncières freinent l’accès à la propriété sécurisée, alimentent les conflits et limitent les recettes fiscales. Malgré les ambitions affichées, une réforme structurelle de la chaîne foncière reste attendue."
   },
+   },
+    {
+    titre: "Cartographie d'un revers territorial : Quand les cartes révèlent l'ampleur des pertes du Gabon face à la Guinée équatoriale",
+    date: "2025-05-28",
+    fichier: "2025-05-28-Frontieres-Gabon_Guinee-equatoriale.pdf",
+    resume: "La décision de la CIJ sur Mbanié, Conga et Cocotiers soulève d’importants enjeux maritimes et économiques pour le Gabon. Cette note en analyse les implications juridiques et le bilan territorial, en mer comme sur terre."
+  },
 ];
