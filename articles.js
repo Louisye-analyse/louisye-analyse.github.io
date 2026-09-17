@@ -118,4 +118,10 @@ const ARTICLES = [
     fichier: "articles/2026-08-26-Deguerpissements-Cite-Democratie.pdf",
     resume: "Autour de la Cité de la Démocratie, une opération de libération d’emprise menace des habitations sans périmètre clairement publié ni garanties d’indemnisation. La consultation tardive des habitants révèle une procédure opaque, à l’approche de la rentrée scolaire."
   },
+  {
+    titre: "Quatorze outils pour le territoire gabonais : La boîte à outils de l'aménagement du territoire au Gabon, et ce qui lui manque pour servir",
+    date: "2026-09-13",
+    fichier: "articles/2026-09-13-Boite-Outils-DGAT.pdf",
+    resume: "Le Gabon dispose de 14 outils d’aménagement du territoire, mais leur portée reste limitée par des bases juridiques insuffisantes, des documents peu accessibles et des collectivités sans moyens. Cette note examine l’écart entre les outils annoncés et leur application réelle."
+  },
 ];
