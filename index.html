@@ -8,153 +8,280 @@
   <meta property="og:title" content="Mes Analyses du Quartier">
   <meta property="og:description" content="Analyses claires et accessibles sur l’actualité politique, sociale et environnementale du Gabon, en 1 à 6 pages.">
   <meta property="og:url" content="https://louisye-analyse.github.io/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
   <style>
+    /* ==========================================================
+       RÉGLAGES FACILES À MODIFIER
+       ========================================================== */
     :root {
+      /* IMAGE DU BANDEAU : dépose ton image à la racine du dépôt
+         sous le nom bandeau.jpg. Sans image, le bandeau reste vert. */
+      --image-bandeau: url("bandeau.jpg");
+
+      /* Voile vert posé sur l'image pour que le texte reste lisible.
+         0.60 = image bien visible, 0.85 = image très discrète. */
+      --voile: 0.72;
+
+      /* Couleurs */
+      --accent: #1f6f5c;
+      --accent-fonce: #164f42;
+      --accent-clair: #e4f0ec;
       --fond: #f7f5f0;
       --carte: #ffffff;
-      --texte: #222222;
-      --doux: #666666;
-      --accent: #1f6f5c;
-      --accent-clair: #e4f0ec;
+      --texte: #1f2328;
+      --doux: #5f6368;
       --bordure: #e2ded5;
     }
+    /* ========================================================== */
+
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
       background: var(--fond);
       color: var(--texte);
-      line-height: 1.6;
+      font-variant-numeric: lining-nums;
     }
-    header {
-      background: var(--accent);
+    h1, h2, h3, .titre-article {
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+    }
+    a { color: var(--accent); }
+
+    /* ---------- Bandeau ---------- */
+    .bandeau {
+      position: relative;
       color: #ffffff;
-      padding: 48px 16px;
       text-align: center;
+      padding: 72px 16px 64px;
+      background-color: var(--accent);
+      background-image: var(--image-bandeau);
+      background-size: cover;
+      background-position: center;
     }
-    header h1 { margin: 0 0 8px; font-size: 2.2rem; }
-    header p { margin: 0; opacity: 0.9; }
-    main { max-width: 760px; margin: 0 auto; padding: 32px 16px; }
-    section { margin-bottom: 40px; }
-    h2 {
-      font-size: 1.4rem;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 6px;
+    .bandeau::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(22, 79, 66, var(--voile));
     }
-    h3 {
-      font-size: 1.05rem;
-      color: var(--doux);
-      margin: 24px 0 8px;
-      text-transform: capitalize;
+    .bandeau-contenu { position: relative; max-width: 820px; margin: 0 auto; }
+    .bandeau h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      font-weight: 700;
     }
-    .articles { list-style: none; padding: 0; margin: 0; }
-    .articles li {
-      background: var(--carte);
-      border: 1px solid var(--bordure);
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin-bottom: 12px;
+    .slogan {
+      margin: 0 auto;
+      max-width: 640px;
+      font-size: 1.12rem;
+      opacity: 0.95;
     }
-    .recents li {
-      border-left: 5px solid var(--accent);
-      background: var(--accent-clair);
-    }
-    .articles a {
-      color: var(--accent);
-      font-weight: bold;
-      font-size: 1.1rem;
-      text-decoration: none;
-    }
-    .articles a:hover { text-decoration: underline; }
-    .date { display: block; color: var(--doux); font-size: 0.9rem; }
-    .resume { margin: 6px 0 0; }
-    .vide { color: var(--doux); font-style: italic; }
     .boutons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
-      margin-top: 20px;
+      gap: 10px;
+      margin-top: 28px;
     }
     .bouton {
       display: inline-block;
-      padding: 12px 22px;
+      padding: 11px 22px;
       border-radius: 999px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: bold;
-      font-size: 1rem;
+      font-weight: 600;
+      font-size: 0.97rem;
       text-decoration: none;
+      transition: background 0.15s, color 0.15s;
     }
-    .bouton:hover { filter: brightness(0.93); }
-    .bouton-clair { background: #ffffff; color: var(--accent); }
+    .bouton-clair { background: #ffffff; color: var(--accent-fonce); }
+    .bouton-clair:hover { background: var(--accent-clair); }
+    .bouton-contour { border: 2px solid #ffffff; color: #ffffff; padding: 9px 20px; }
+    .bouton-contour:hover { background: rgba(255, 255, 255, 0.15); }
+    .bouton-plein { background: var(--accent); color: #ffffff; }
+    .bouton-plein:hover { background: var(--accent-fonce); }
+
+    /* ---------- Contenu ---------- */
+    main { max-width: 1080px; margin: 0 auto; padding: 36px 16px 24px; }
+
+    .message-pdf {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--accent-clair);
+      border-radius: 10px;
+      padding: 14px 20px;
+      margin-bottom: 40px;
+      color: var(--accent-fonce);
+    }
+    .message-pdf .pastille {
+      flex: none;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      border-radius: 6px;
+      padding: 4px 8px;
+      letter-spacing: 0.04em;
+    }
+    .message-pdf p { margin: 0; }
+
+    section { margin-bottom: 48px; }
+    h2 {
+      font-size: 1.7rem;
+      margin: 0 0 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+    }
+    h3.mois {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--doux);
+      margin: 28px 0 12px;
+    }
+
+    /* ---------- Cartes d'articles ---------- */
+    .grille {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .carte {
+      display: flex;
+      flex-direction: column;
+      background: var(--carte);
+      border: 1px solid var(--bordure);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .carte:hover { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); transform: translateY(-2px); }
+    .carte-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--accent-clair); }
+    .carte-corps { display: flex; flex-direction: column; flex: 1; padding: 20px 22px 22px; }
+    .infos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px 12px;
+      font-size: 0.85rem;
+      color: var(--doux);
+      margin-bottom: 8px;
+    }
+    .theme {
+      background: var(--accent-clair);
+      color: var(--accent-fonce);
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 2px 10px;
+    }
+    .titre-article {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0 0 10px;
+      color: var(--texte);
+    }
+    .resume { margin: 0 0 18px; color: #3c4043; font-size: 0.98rem; }
+    .carte .bouton { align-self: flex-start; margin-top: auto; }
+
+    /* Article à la une : plus grand */
+    .une { margin-bottom: 20px; }
+    .une .carte-image { aspect-ratio: auto; height: 100%; min-height: 240px; }
+    .une .carte-corps { padding: 28px 32px 30px; }
+    .une .titre-article { font-size: clamp(1.45rem, 3vw, 1.9rem); }
+    .une .resume { font-size: 1.05rem; }
+    .une.avec-image { display: grid; grid-template-columns: 2fr 3fr; }
+    .etiquette-une {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      padding: 3px 9px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 700px) {
+      .une.avec-image { display: flex; }
+      .une .carte-image { min-height: 0; aspect-ratio: 16 / 9; }
+      .une .carte-corps { padding: 20px 22px 22px; }
+      .bandeau { padding: 52px 16px 44px; }
+    }
+
+    .vide { color: var(--doux); font-style: italic; }
+
+    /* ---------- Pied de page ---------- */
     footer {
+      border-top: 1px solid var(--bordure);
       text-align: center;
       color: var(--doux);
       font-size: 0.9rem;
-      padding: 24px 16px 40px;
+      padding: 28px 16px 40px;
     }
     footer p { margin: 4px 0; }
-    footer a { color: var(--accent); }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Mes Analyses du Quartier</h1>
-    <p>Retrouvez toutes les notes en téléchargement sur cette page, 
-      ainsi que sur ma chaîne WhatsApp « Mes Analyses du Quartier ».</p>
-    <div class="boutons">
-      <a class="bouton bouton-clair"
-         href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
-         target="_blank" rel="noopener">Suivre la chaîne WhatsApp</a>
-      <a class="bouton bouton-clair" href="auteur.html">Découvrir l’auteur</a>
+  <header class="bandeau">
+    <div class="bandeau-contenu">
+      <h1>Mes Analyses du Quartier</h1>
+      <p class="slogan">Retrouvez toutes les notes en téléchargement sur cette page,
+         ainsi que sur ma chaîne WhatsApp «&nbsp;Mes Analyses du Quartier&nbsp;».</p>
+      <nav class="boutons">
+        <a class="bouton bouton-clair" href="apropos.html">À propos</a>
+        <a class="bouton bouton-clair" href="auteur.html">Découvrir l’auteur</a>
+        <a class="bouton bouton-contour"
+           href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
+           target="_blank" rel="noopener">Suivre la chaîne WhatsApp</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section>
-      <h2>À propos</h2>
-      <p>Bienvenue dans « Mes Analyses du Quartier », un espace pour comprendre le
-        Gabon à travers ses territoires et les réalités de ceux qui y vivent.</p>
-      <p>J’y porte un double regard, celui du citoyen et du géographe, sur l’actualité 
-        politique, sociale et environnementale du pays. Aménagement du territoire, 
-        foncier, urbanisme, décentralisation, risques naturels ou changement climatique 
-        : ces sujets façonnent notre quotidien et méritent d’être accessibles au plus grand nombre.</p>
-      <p>Mon objectif est de rendre compréhensibles des questions complexes, sans en effacer les nuances. 
-        Chaque analyse prend la forme d’une note courte, de 1 à 4 pages au format A4, rédigée dans 
-        un langage clair et, lorsque cela est utile, accompagnée de cartes, de données ou d’exemples concrets.</p>
-      <p>Au-delà des annonces, je m’intéresse à leur traduction sur le terrain : ce que prévoient les textes, 
-        ce que mettent en œuvre les institutions et ce que vivent les populations. Cette démarche vise à éclairer
-        les écarts, à interroger les choix publics et à proposer des pistes d’action.</p>
-      <p>« Mes Analyses du Quartier » invite ainsi chacun à mieux comprendre, à questionner et à prendre part
-        au débat sur l’avenir de nos territoires.</p>
-    </section>
+    <div class="message-pdf">
+      <span class="pastille">PDF</span>
+      <p>Vous pouvez télécharger les articles en PDF ici. Cliquez sur
+         «&nbsp;Lire la note&nbsp;» pour l’ouvrir ou l’enregistrer.</p>
+    </div>
 
     <section>
       <h2 id="titre-recents">Articles du dernier mois</h2>
-      <ul class="Notes recentes" id="recents"></ul>
+      <div id="recents"></div>
     </section>
 
     <section>
-      <h2>Anciens Notes</h2>
+      <h2>Anciens articles</h2>
       <div id="anciens"></div>
     </section>
   </main>
 
   <footer>
-    <p>© Mes Analyses du Quartier</p>
+    <p>© Mes Analyses du Quartier · Louis Kadryl Yembi-Yembi</p>
     <p>
+      <a href="apropos.html">À propos</a> ·
+      <a href="auteur.html">L’auteur</a> ·
       <a href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
          target="_blank" rel="noopener">Chaîne WhatsApp</a>
-      ·
-      <a href="auteur.html">L’auteur</a>
     </p>
   </footer>
 
   <!-- La liste des articles est dans le fichier articles.js -->
   <script src="articles.js"></script>
   <script>
-    // Ce code classe les articles automatiquement.
+    // Ce code affiche et classe les articles automatiquement.
     // Tu n'as pas besoin de le modifier.
     const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
                   "août", "septembre", "octobre", "novembre", "décembre"];
@@ -169,49 +296,63 @@
       return Number(jour) + " " + MOIS[Number(mois) - 1] + " " + annee;
     }
 
-    function carteArticle(article) {
-      const li = document.createElement("li");
-
-      const date = document.createElement("span");
-      date.className = "date";
-      date.textContent = dateEnFrancais(article.date);
-      li.appendChild(date);
-
-      const lien = document.createElement("a");
-      lien.href = encodeURI(article.fichier);
-      lien.target = "_blank";
-      lien.textContent = article.titre;
-      li.appendChild(lien);
-
-      if (article.resume) {
-        const resume = document.createElement("p");
-        resume.className = "resume";
-        resume.textContent = article.resume;
-        li.appendChild(resume);
-      }
-      return li;
+    function element(balise, classe, texte) {
+      const el = document.createElement(balise);
+      if (classe) el.className = classe;
+      if (texte) el.textContent = texte;
+      return el;
     }
 
-    function messageVide(texte) {
-      const p = document.createElement("p");
-      p.className = "vide";
-      p.textContent = texte;
-      return p;
+    function carteArticle(article, aLaUne) {
+      const carte = element("article", "carte" + (aLaUne ? " une" : ""));
+
+      if (article.image) {
+        const img = element("img", "carte-image");
+        img.src = encodeURI(article.image);
+        img.alt = "";
+        img.loading = "lazy";
+        img.onerror = () => { img.remove(); carte.classList.remove("avec-image"); };
+        carte.appendChild(img);
+        carte.classList.add("avec-image");
+      }
+
+      const corps = element("div", "carte-corps");
+      if (aLaUne) corps.appendChild(element("span", "etiquette-une", "À la une"));
+
+      const infos = element("div", "infos");
+      if (article.theme) infos.appendChild(element("span", "theme", article.theme));
+      infos.appendChild(element("span", "", dateEnFrancais(article.date)));
+      if (article.pages) {
+        const nb = Number(article.pages);
+        infos.appendChild(element("span", "", "· " + nb + (nb > 1 ? " pages" : " page")));
+      }
+      corps.appendChild(infos);
+
+      corps.appendChild(element("h3", "titre-article", article.titre));
+      if (article.resume) corps.appendChild(element("p", "resume", article.resume));
+
+      const lien = element("a", "bouton bouton-plein", "Lire la note (PDF)");
+      lien.href = encodeURI(article.fichier);
+      lien.target = "_blank";
+      lien.rel = "noopener";
+      corps.appendChild(lien);
+
+      carte.appendChild(corps);
+      return carte;
     }
 
     const zoneRecents = document.getElementById("recents");
     const zoneAnciens = document.getElementById("anciens");
 
     if (typeof ARTICLES === "undefined") {
-      zoneRecents.replaceWith(messageVide(
+      zoneRecents.appendChild(element("p", "vide",
         "Le fichier articles.js contient une erreur : vérifie les virgules et les guillemets."));
     } else {
-      // Du plus récent au plus ancien
       const tries = [...ARTICLES].sort((a, b) => b.date.localeCompare(a.date));
 
       if (tries.length === 0) {
-        zoneRecents.replaceWith(messageVide("Les premiers articles arrivent très vite."));
-        zoneAnciens.appendChild(messageVide("Pas encore d'anciens articles."));
+        zoneRecents.appendChild(element("p", "vide", "Les premiers articles arrivent très vite."));
+        zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciens articles."));
       } else {
         // Le « dernier mois » = le mois de l'article le plus récent
         const dernierMois = tries[0].date.slice(0, 7);
@@ -221,26 +362,28 @@
         const recents = tries.filter(a => a.date.slice(0, 7) === dernierMois);
         const anciens = tries.filter(a => a.date.slice(0, 7) !== dernierMois);
 
-        recents.forEach(a => zoneRecents.appendChild(carteArticle(a)));
+        // Le plus récent en grand, les autres du même mois en grille
+        zoneRecents.appendChild(carteArticle(recents[0], true));
+        if (recents.length > 1) {
+          const grille = element("div", "grille");
+          recents.slice(1).forEach(a => grille.appendChild(carteArticle(a, false)));
+          zoneRecents.appendChild(grille);
+        }
 
         if (anciens.length === 0) {
-          zoneAnciens.appendChild(messageVide("Pas encore d'anciens articles."));
+          zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciens articles."));
         } else {
-          // Anciens articles regroupés par mois
           let moisEnCours = "";
-          let liste = null;
+          let grille = null;
           anciens.forEach(a => {
             const mois = a.date.slice(0, 7);
             if (mois !== moisEnCours) {
               moisEnCours = mois;
-              const titre = document.createElement("h3");
-              titre.textContent = nomDuMois(a.date);
-              zoneAnciens.appendChild(titre);
-              liste = document.createElement("ul");
-              liste.className = "articles";
-              zoneAnciens.appendChild(liste);
+              zoneAnciens.appendChild(element("h3", "mois", nomDuMois(a.date)));
+              grille = element("div", "grille");
+              zoneAnciens.appendChild(grille);
             }
-            liste.appendChild(carteArticle(a));
+            grille.appendChild(carteArticle(a, false));
           });
         }
       }
