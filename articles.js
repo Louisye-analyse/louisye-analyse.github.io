@@ -58,4 +58,10 @@ const ARTICLES = [
     fichier: "articles/2025-06-20-Decentralisation-au-gabon.pdf",
     resume: "Le Gabon affiche depuis juin 2025 une volonté de concrétiser la décentralisation. Mais sans moyens financiers, humains et réglementaires, le transfert de compétences risque de maintenir une autonomie purement symbolique des collectivités."
   },
+   {
+    titre: "Déguerpissements urbains à Libreville : Entre brutalité étatique et absence de gouvernance foncière durable",
+    date: "2025-06-04",
+    fichier: "articles/2026-04-06-Deguerpissement-a-Libreville.pdf",
+    resume: "Les démolitions à Libreville révèlent les défaillances de la régularisation foncière et le manque de protection des habitants. Cette note examine les responsabilités publiques et propose six étapes pour un aménagement respectueux des droits des populations."
+  },
 ];
