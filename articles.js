@@ -40,21 +40,19 @@ const ARTICLES = [
     fichier: "articles/2025-05-16-Decoupage-electoral.pdf",
     resume: "Déconnecté des réalités démographiques et géographiques, le découpage électoral gabonais crée des inégalités de représentation. Cette analyse propose deux réformes : un redécoupage fondé sur des critères objectifs ou une pondération des voix parlementaires."
   },
-    {
+  {
     titre: "La procédure de régularisation foncière : Un long chemin semé d'embûches, et un frein à l'élargissement de l'assiette fiscale",
     date: "2025-05-20",
     fichier: "articles/2025-05-20-Regularisation-fonciere.pdf",
     resume: "Au Gabon, la lenteur, l’opacité et le coût des procédures foncières freinent l’accès à la propriété sécurisée, alimentent les conflits et limitent les recettes fiscales. Malgré les ambitions affichées, une réforme structurelle de la chaîne foncière reste attendue."
   },
-   },
-    {
+  {
     titre: "Cartographie d'un revers territorial : Quand les cartes révèlent l'ampleur des pertes du Gabon face à la Guinée équatoriale",
     date: "2025-05-28",
     fichier: "articles/2025-05-28-Frontieres-Gabon_Guinee-equatoriale.pdf",
     resume: "La décision de la CIJ sur Mbanié, Conga et Cocotiers soulève d’importants enjeux maritimes et économiques pour le Gabon. Cette note en analyse les implications juridiques et le bilan territorial, en mer comme sur terre."
   },
-  },
-    {
+  {
     titre: "Décentralisation au Gabon : Un tournant graduel à réussir pour bâtir une gouvernance de proximité",
     date: "2025-06-20",
     fichier: "articles/2025-06-20-Decentralisation-au-gabon.pdf",
