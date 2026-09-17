@@ -100,4 +100,16 @@ const ARTICLES = [
     fichier: "articles/2026-02-23-RFM-risques-naturels.pdf",
     resume: "La régularisation foncière annoncée dans le Grand Libreville promet de sécuriser plus de 5 100 familles, mais risque de légaliser des occupations en zones dangereuses. Sans diagnostic préalable des risques, qui assumera la responsabilité des futurs dommages ?"
   },
+  {
+    titre: "Libreville 2 L'illusion d'une ville ex nihilo face aux réalités d'un système vivant",
+    date: "2026-05-12",
+    fichier: "articles/2026-05-12-Libreville2-illusion.pdf",
+    resume: "Le projet « Libreville 2 » à Andem privilégie le symbole architectural au détriment des réalités territoriales et sociales. Cette note interroge une planification qui risque de produire une ville coûteuse et déconnectée des besoins des habitants."
+  },
+  {
+    titre: "Potasse de Mayumba : Que devient vraiment le projet signé en fanfare à Washington ?",
+    date: "2026-08-24",
+    fichier: "articles/22026-08-24-Potasse-Mayumba-un-an-apres.pdf",
+    resume: "Malgré l’accord annoncé de 500 millions de dollars, le projet de potasse de Mayumba reste au stade des études, sans financement de construction bouclé ni permis d’exploitation. Cette note analyse l’écart entre les annonces et l’avancement réel du projet."
+  },
 ];
