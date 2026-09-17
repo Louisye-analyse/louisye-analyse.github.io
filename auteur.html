@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L’auteur – Mes Analyses du Quartier</title>
+  <meta name="description" content="Louis Kadryl Yembi-Yembi, docteur en géographie, cartographe et géomaticien, auteur de Mes Analyses du Quartier.">
+  <style>
+    :root {
+      --fond: #f7f5f0;
+      --carte: #ffffff;
+      --texte: #222222;
+      --doux: #666666;
+      --accent: #1f6f5c;
+      --accent-clair: #e4f0ec;
+      --bordure: #e2ded5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--fond);
+      color: var(--texte);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 48px 16px;
+      text-align: center;
+    }
+    .retour {
+      display: inline-block;
+      color: #ffffff;
+      opacity: 0.9;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+    .surtitre {
+      margin: 0 0 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+    header h1 { margin: 0 0 8px; font-size: 2.2rem; }
+    header p { margin: 0; }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 16px; }
+    section { margin-bottom: 40px; }
+    h2 {
+      font-size: 1.4rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+    }
+    .boutons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .bouton {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    .bouton:hover { filter: brightness(0.93); }
+    .bouton-clair { background: #ffffff; color: var(--accent); }
+    .bouton-plein { background: var(--accent); color: #ffffff; }
+    .parcours { list-style: none; padding: 0; margin: 0; }
+    .parcours li {
+      background: var(--carte);
+      border: 1px solid var(--bordure);
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      padding: 14px 20px;
+      margin-bottom: 12px;
+    }
+    .periode { display: block; color: var(--doux); font-size: 0.9rem; }
+    .poste { display: block; font-weight: bold; }
+    .lieu { display: block; }
+    .etiquettes { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+    .etiquettes li {
+      background: var(--accent-clair);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 0.95rem;
+    }
+    main a { color: var(--accent); }
+    .appel {
+      text-align: center;
+      background: var(--carte);
+      border: 1px solid var(--bordure);
+      border-radius: 8px;
+      padding: 24px 20px;
+    }
+    .appel p { margin: 0; }
+    footer {
+      text-align: center;
+      color: var(--doux);
+      font-size: 0.9rem;
+      padding: 24px 16px 40px;
+    }
+    footer p { margin: 4px 0; }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="retour" href="index.html">← Retour aux articles</a>
+    <p class="surtitre">L’auteur</p>
+    <h1>Louis Kadryl Yembi-Yembi</h1>
+    <p>Docteur en géographie · Cartographe et géomaticien</p>
+    <div class="boutons">
+      <a class="bouton bouton-clair"
+         href="https://www.linkedin.com/in/louis-kadryl-yembi-yembi-537414a3/"
+         target="_blank" rel="noopener">Voir son profil LinkedIn</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Présentation</h2>
+      <p>Louis Kadryl Yembi-Yembi est docteur en géographie physique, humaine,
+         économique et régionale de l’Université de Caen Normandie. Cartographe et
+         géomaticien, il met la cartographie et les systèmes d’information
+         géographique (SIG) au service de la compréhension des territoires.</p>
+      <p>Ses travaux portent notamment sur les risques côtiers et la vulnérabilité
+         des villes au Gabon. C’est ce regard de géographe qu’il applique, dans
+         «&nbsp;Mes Analyses du Quartier&nbsp;», à l’actualité politique, sociale
+         et environnementale du pays.</p>
+    </section>
+
+    <section>
+      <h2>Parcours professionnel</h2>
+      <ul class="parcours">
+        <li>
+          <span class="periode">Depuis 2024</span>
+          <span class="poste">Manager du Pôle Ingénierie Géomatique</span>
+          <span class="lieu">Groupe IDEX</span>
+        </li>
+        <li>
+          <span class="periode">2022 – 2024</span>
+          <span class="poste">Chef de projet géomatique</span>
+          <span class="lieu">UrbanThink</span>
+        </li>
+        <li>
+          <span class="periode">2020 – 2022</span>
+          <span class="poste">Enseignement et recherche</span>
+          <span class="lieu">Université de Caen Normandie</span>
+        </li>
+        <li>
+          <span class="periode">2018 – 2019</span>
+          <span class="poste">Ingénieur géomaticien</span>
+          <span class="lieu">TotalEnergies</span>
+        </li>
+        <li>
+          <span class="periode">2016 – 2024</span>
+          <span class="poste">Cofondateur</span>
+          <span class="lieu">MultiRotor Services Gabon</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Formation</h2>
+      <ul class="parcours">
+        <li>
+          <span class="periode">2024</span>
+          <span class="poste">Doctorat en géographie</span>
+          <span class="lieu">Université de Caen Normandie</span>
+        </li>
+        <li>
+          <span class="periode">2016</span>
+          <span class="poste">Master en géomatique des territoires vulnérables</span>
+          <span class="lieu">Université de Caen Normandie</span>
+        </li>
+        <li>
+          <span class="periode">2015</span>
+          <span class="poste">Master en ingénierie et gestion des territoires</span>
+          <span class="lieu">Université Paul-Valéry Montpellier 3</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Domaines d’expertise</h2>
+      <ul class="etiquettes">
+        <li>Cartographie</li>
+        <li>Géomatique et SIG</li>
+        <li>Risques côtiers</li>
+        <li>Vulnérabilité urbaine</li>
+        <li>Diagnostic territorial</li>
+        <li>Prospective territoriale</li>
+        <li>Analyse spatio-temporelle</li>
+        <li>Géographie de l’environnement</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Travaux de recherche</h2>
+      <ul class="parcours">
+        <li>
+          <span class="periode">Thèse de doctorat · soutenue le 11 juin 2024</span>
+          <span class="poste">
+            <a href="https://theses.fr/2024NORMC007" target="_blank" rel="noopener">
+              Évaluation de la vulnérabilité urbaine face aux inondations induites
+              par la mer&nbsp;: le cas de la commune de Port-Gentil (Gabon)</a>
+          </span>
+          <span class="lieu">Université de Caen Normandie, sous la direction de
+            Stéphane Costa et Emmanuel Bonnet</span>
+        </li>
+        <li>
+          <span class="periode">Article · revue Cybergeo</span>
+          <span class="poste">
+            <a href="https://journals.openedition.org/cybergeo/38919" target="_blank" rel="noopener">
+              Perceptions et représentations socio-spatiales des risques dans les
+              communes multirisques&nbsp;: le cas de la place du risque d’inondation
+              par la mer chez les habitants de Port-Gentil au Gabon</a>
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="appel">
+      <p>Pour découvrir son parcours complet et échanger avec lui&nbsp;:</p>
+      <div class="boutons">
+        <a class="bouton bouton-plein"
+           href="https://www.linkedin.com/in/louis-kadryl-yembi-yembi-537414a3/"
+           target="_blank" rel="noopener">Voir son profil LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Mes Analyses du Quartier</p>
+    <p>
+      <a href="index.html">Accueil</a>
+      ·
+      <a href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
+         target="_blank" rel="noopener">Chaîne WhatsApp</a>
+    </p>
+  </footer>
+
+</body>
+</html>

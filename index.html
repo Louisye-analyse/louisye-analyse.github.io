@@ -69,9 +69,15 @@
     .date { display: block; color: var(--doux); font-size: 0.9rem; }
     .resume { margin: 6px 0 0; }
     .vide { color: var(--doux); font-style: italic; }
+    .boutons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
     .bouton {
       display: inline-block;
-      margin-top: 20px;
       padding: 12px 22px;
       border-radius: 999px;
       font-family: Arial, Helvetica, sans-serif;
@@ -80,21 +86,7 @@
       text-decoration: none;
     }
     .bouton:hover { filter: brightness(0.93); }
-    .bouton-whatsapp { background: #ffffff; color: var(--accent); }
-    .bouton-linkedin { background: #0a66c2; color: #ffffff; margin-top: 8px; }
-    .auteur {
-      background: var(--carte);
-      border: 1px solid var(--bordure);
-      border-radius: 8px;
-      padding: 16px 20px 20px;
-      margin-top: 20px;
-    }
-    .auteur p { margin: 0 0 8px; }
-    .auteur-titre {
-      margin: 0 0 6px;
-      color: var(--accent);
-      text-transform: none;
-    }
+    .bouton-clair { background: #ffffff; color: var(--accent); }
     footer {
       text-align: center;
       color: var(--doux);
@@ -111,9 +103,12 @@
     <h1>Mes Analyses du Quartier</h1>
     <p>Les articles de ma page, à lire et à télécharger,
        que vous pouvez aussi retrouver sur ma chaîne WhatsApp</p>
-    <a class="bouton bouton-whatsapp"
-       href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
-       target="_blank" rel="noopener">Suivre la chaîne WhatsApp</a>
+    <div class="boutons">
+      <a class="bouton bouton-clair"
+         href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
+         target="_blank" rel="noopener">Suivre la chaîne WhatsApp</a>
+      <a class="bouton bouton-clair" href="auteur.html">Découvrir l’auteur</a>
+    </div>
   </header>
 
   <main>
@@ -126,15 +121,6 @@
          1 à 4 pages maximum (format A4), rédigées dans un langage clair et
          accessible à tous.</p>
 
-      <div class="auteur">
-        <h3 class="auteur-titre">L’auteur</h3>
-        <p>L’auteur est docteur en géographie physique, humaine, économique et
-           régionale. Il est cartographe et géomaticien. Vous pouvez consulter
-           son parcours sur LinkedIn.</p>
-        <a class="bouton bouton-linkedin"
-           href="https://www.linkedin.com/in/louis-kadryl-yembi-yembi-537414a3/"
-           target="_blank" rel="noopener">Voir le parcours de l’auteur sur LinkedIn</a>
-      </div>
     </section>
 
     <section>
@@ -154,8 +140,7 @@
       <a href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
          target="_blank" rel="noopener">Chaîne WhatsApp</a>
       ·
-      <a href="https://www.linkedin.com/in/louis-kadryl-yembi-yembi-537414a3/"
-         target="_blank" rel="noopener">L’auteur sur LinkedIn</a>
+      <a href="auteur.html">L’auteur</a>
     </p>
   </footer>
 
