@@ -50,7 +50,14 @@ const ARTICLES = [
     {
     titre: "Cartographie d'un revers territorial : Quand les cartes révèlent l'ampleur des pertes du Gabon face à la Guinée équatoriale",
     date: "2025-05-28",
-    fichier: "2025-05-28-Frontieres-Gabon_Guinee-equatoriale.pdf",
+    fichier: "articles/2025-05-28-Frontieres-Gabon_Guinee-equatoriale.pdf",
     resume: "La décision de la CIJ sur Mbanié, Conga et Cocotiers soulève d’importants enjeux maritimes et économiques pour le Gabon. Cette note en analyse les implications juridiques et le bilan territorial, en mer comme sur terre."
+  },
+  },
+    {
+    titre: "Décentralisation au Gabon : Un tournant graduel à réussir pour bâtir une gouvernance de proximité",
+    date: "2025-06-20",
+    fichier: "articles/2025-06-20-Decentralisation-au-gabon.pdf",
+    resume: "Le Gabon affiche depuis juin 2025 une volonté de concrétiser la décentralisation. Mais sans moyens financiers, humains et réglementaires, le transfert de compétences risque de maintenir une autonomie purement symbolique des collectivités."
   },
 ];
