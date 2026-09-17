@@ -91,7 +91,7 @@ const ARTICLES = [
   {
     titre: "Une gestion des risques d'inondation, inondée d'incohérences : Libreville face à l'illusion de l'action publique",
     date: "2026-01-29",
-    fichier: "articles/2026-01-29-gestion-des-risques -Inondations.pdf",
+    fichier: "articles/2026-01-29-gestion-des-risques-Inondations.pdf",
     resume: "Les inondations à Libreville révèlent une gestion des risques centrée sur l’urgence et la communication. Malgré des causes connues, les réponses restent ponctuelles, sans prévention durable ni réforme de la gouvernance territoriale."
   },
    {
