@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos – Mes Analyses du Quartier</title>
+  <meta name="description" content="Mes Analyses du Quartier : un espace pour comprendre le Gabon à travers ses territoires et les réalités de ceux qui y vivent.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================
+       RÉGLAGES FACILES À MODIFIER (les mêmes que sur l'accueil)
+       ========================================================== */
+    :root {
+      --image-bandeau: url("bandeau.jpg");
+      --voile: 0.72;
+
+      --accent: #1f6f5c;
+      --accent-fonce: #164f42;
+      --accent-clair: #e4f0ec;
+      --fond: #f7f5f0;
+      --carte: #ffffff;
+      --texte: #1f2328;
+      --doux: #5f6368;
+      --bordure: #e2ded5;
+    }
+    /* ========================================================== */
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      background: var(--fond);
+      color: var(--texte);
+      font-variant-numeric: lining-nums;
+    }
+    h1, h2 { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; }
+    a { color: var(--accent); }
+
+    .bandeau {
+      position: relative;
+      color: #ffffff;
+      text-align: center;
+      padding: 56px 16px 52px;
+      background-color: var(--accent);
+      background-image: var(--image-bandeau);
+      background-size: cover;
+      background-position: center;
+    }
+    .bandeau::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(22, 79, 66, var(--voile));
+    }
+    .bandeau-contenu { position: relative; max-width: 820px; margin: 0 auto; }
+    .retour { color: #ffffff; font-size: 0.95rem; }
+    .surtitre {
+      margin: 18px 0 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.8rem;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    .bandeau h1 { margin: 0; font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.15; }
+
+    main { max-width: 720px; margin: 0 auto; padding: 44px 16px 24px; }
+    .chapeau {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.35rem;
+      line-height: 1.5;
+      color: var(--accent-fonce);
+      margin: 0 0 28px;
+      padding-left: 18px;
+      border-left: 4px solid var(--accent);
+    }
+    main p { margin: 0 0 18px; }
+    .conclusion { font-weight: 600; }
+
+    .boutons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 40px 0 8px;
+    }
+    .bouton {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.97rem;
+      text-decoration: none;
+    }
+    .bouton-plein { background: var(--accent); color: #ffffff; }
+    .bouton-plein:hover { background: var(--accent-fonce); }
+    .bouton-contour { border: 2px solid var(--accent); color: var(--accent); padding: 9px 20px; }
+    .bouton-contour:hover { background: var(--accent-clair); }
+
+    footer {
+      border-top: 1px solid var(--bordure);
+      text-align: center;
+      color: var(--doux);
+      font-size: 0.9rem;
+      padding: 28px 16px 40px;
+      margin-top: 32px;
+    }
+    footer p { margin: 4px 0; }
+  </style>
+</head>
+<body>
+
+  <header class="bandeau">
+    <div class="bandeau-contenu">
+      <a class="retour" href="index.html">← Retour aux articles</a>
+      <p class="surtitre">À propos</p>
+      <h1>Mes Analyses du Quartier</h1>
+    </div>
+  </header>
+
+  <main>
+    <p class="chapeau">Bienvenue dans «&nbsp;Mes Analyses du Quartier&nbsp;», un espace pour
+       comprendre le Gabon à travers ses territoires et les réalités de ceux qui y vivent.</p>
+
+    <p>J’y porte un double regard, celui du citoyen et du géographe, sur l’actualité
+       politique, sociale et environnementale du pays. Aménagement du territoire, foncier,
+       urbanisme, décentralisation, risques naturels ou changement climatique&nbsp;: ces sujets
+       façonnent notre quotidien et méritent d’être accessibles au plus grand nombre.</p>
+
+    <p>Mon objectif est de rendre compréhensibles des questions complexes, sans en effacer
+       les nuances. Chaque analyse prend la forme d’une note courte, de 1 à 4 pages au format
+       A4, rédigée dans un langage clair et, lorsque cela est utile, accompagnée de cartes,
+       de données ou d’exemples concrets.</p>
+
+    <p>Au-delà des annonces, je m’intéresse à leur traduction sur le terrain&nbsp;: ce que
+       prévoient les textes, ce que mettent en œuvre les institutions et ce que vivent les
+       populations. Cette démarche vise à éclairer les écarts, à interroger les choix publics
+       et à proposer des pistes d’action.</p>
+
+    <p class="conclusion">«&nbsp;Mes Analyses du Quartier&nbsp;» invite ainsi chacun à mieux comprendre,
+       à questionner et à prendre part au débat sur l’avenir de nos territoires.</p>
+
+    <div class="boutons">
+      <a class="bouton bouton-plein" href="index.html">Lire les articles</a>
+      <a class="bouton bouton-contour" href="auteur.html">Découvrir l’auteur</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© Mes Analyses du Quartier · Louis Kadryl Yembi-Yembi</p>
+    <p>
+      <a href="index.html">Accueil</a> ·
+      <a href="auteur.html">L’auteur</a> ·
+      <a href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
+         target="_blank" rel="noopener">Chaîne WhatsApp</a>
+    </p>
+  </footer>
+
+</body>
+</html>
