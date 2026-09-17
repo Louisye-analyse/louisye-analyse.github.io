@@ -61,13 +61,19 @@ const ARTICLES = [
    {
     titre: "Déguerpissements urbains à Libreville : Entre brutalité étatique et absence de gouvernance foncière durable",
     date: "2025-06-04",
-    fichier: "articles/2026-04-06-Deguerpissement-a-Libreville.pdf",
+    fichier: "articles/2025-04-06-Deguerpissement-a-Libreville.pdf",
     resume: "Les démolitions à Libreville révèlent les défaillances de la régularisation foncière et le manque de protection des habitants. Cette note examine les responsabilités publiques et propose six étapes pour un aménagement respectueux des droits des populations."
   },
   {
     titre: "Taxe d'habitation : un choix centralisé : Qui collecte, pour quel territoire, et avec quels outils ?",
     date: "2025-09-16",
-    fichier: "articles/2026-09-16-Taxe-habitation.pdf",
+    fichier: "articles/2025-09-16-Taxe-habitation.pdf",
     resume: "La taxe d’habitation annoncée au Gabon soulève trois questions : à qui iront les recettes, comment la collecter sans cadastre fiable et quelle place accorder aux collectivités dans le cadre de la décentralisation ?"
+  },
+  {
+    titre: "La fragilité de nos données personnelles : Un constat alarmant après la campagne électorale, et ce qu'il faudrait faire pour y remédier",
+    date: "2025-10-12",
+    fichier: "articles/2025-10-12 -Donnees-personnelles",
+    resume: "L’affichage de données personnelles dans les bureaux de vote au Gabon expose les citoyens à l’usurpation d’identité. Cette note examine les failles d’application de la loi et propose sept mesures concrètes pour mieux protéger ces données."
   },
 ];
