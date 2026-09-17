@@ -34,4 +34,10 @@ const ARTICLES = [
     fichier: "articles/2025-04-22-contribution-fonciere-unique.pdf",
     resume: "Limitée aux détenteurs d’un titre foncier, la CFU peine à financer les communes gabonaises. Cette note analyse ses limites et propose un référentiel géographique partagé entre cadastre, urbanisme et impôts pour élargir durablement la base fiscale."
   },
+  {
+    titre: "Découpage électoral et représentativité :Enjeux, déséquilibres et pistes de réforme à la veille des législatives",
+    date: "2025-05-16",
+    fichier: "articles/2025-05-16-Decoupage-electoral.pdf",
+    resume: "Déconnecté des réalités démographiques et géographiques, le découpage électoral gabonais crée des inégalités de représentation. Cette analyse propose deux réformes : un redécoupage fondé sur des critères objectifs ou une pondération des voix parlementaires."
+  },
 ];
