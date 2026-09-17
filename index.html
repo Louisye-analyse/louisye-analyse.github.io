@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -27,440 +27,384 @@
       --voile: 0.72;
 
       /* Couleurs */
-      --accent: #1f6f5c;
-      --accent-fonce: #164f42;
-      --accent-clair: #e4f0ec;
-      --fond: #f7f5f0;
-      --carte: #ffffff;
-      --texte: #1f2328;
-      --doux: #5f6368;
-      --bordure: #e2ded5;
+      --accent: 
+#1f6f5c;
+      --accent-fonce: 
+#164f42;
+      --accent-clair: 
+#e4f0ec;
+      --fond: 
+#f7f5f0;
+      --carte: 
+#ffffff;
+      --texte: 
+#1f2328;
+      --doux: 
+#5f6368;
+      --bordure: 
+#e2ded5;
     }
     /* ========================================================== */
 
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.6;
-      background: var(--fond);
-      color: var(--texte);
-      font-variant-numeric: lining-nums;
-    }
-    h1, h2, h3, .titre-article {
-      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-      font-variant-numeric: lining-nums;
-    }
-    a { color: var(--accent); }
+{ box-sizing: border-box; }
+body {
+margin: 0;
+font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+font-size: 17px;
+line-height: 1.6;
+background: var(--fond);
+color: var(--texte);
+font-variant-numeric: lining-nums;
+}
+h1, h2, h3, .titre-article {
+font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+font-variant-numeric: lining-nums;
+}
+a { color: var(--accent); }
 
-    /* ---------- Bandeau ---------- */
-    .bandeau {
-      position: relative;
-      color: #ffffff;
-      text-align: center;
-      padding: 72px 16px 64px;
-      background-color: var(--accent);
-      background-image: var(--image-bandeau);
-      background-size: cover;
-      background-position: center;
-    }
-    .bandeau::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(22, 79, 66, var(--voile));
-    }
-    .bandeau-contenu { position: relative; max-width: 820px; margin: 0 auto; }
-    .bandeau h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2.1rem, 5vw, 3.2rem);
-      line-height: 1.15;
-      font-weight: 700;
-    }
-    .slogan {
-      margin: 0 auto;
-      max-width: 640px;
-      font-size: 1.12rem;
-      opacity: 0.95;
-    }
-    .boutons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 28px;
-    }
-    .bouton {
-      display: inline-block;
-      padding: 11px 22px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.97rem;
-      text-decoration: none;
-      transition: background 0.15s, color 0.15s;
-    }
-    .bouton-clair { background: #ffffff; color: var(--accent-fonce); }
-    .bouton-clair:hover { background: var(--accent-clair); }
-    .bouton-contour { border: 2px solid #ffffff; color: #ffffff; padding: 9px 20px; }
-    .bouton-contour:hover { background: rgba(255, 255, 255, 0.15); }
-    .bouton-plein { background: var(--accent); color: #ffffff; }
-    .bouton-plein:hover { background: var(--accent-fonce); }
+/* ---------- Bandeau ---------- */
+.bandeau {
+position: relative;
+color: 
+#ffffff;
+text-align: center;
+padding: 72px 16px 64px;
+background-color: var(--accent);
+background-image: var(--image-bandeau);
+background-size: cover;
+background-position: center;
+}
+.bandeau::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(22, 79, 66, var(--voile));
+}
+.bandeau-contenu { position: relative; max-width: 820px; margin: 0 auto; }
+.bandeau h1 {
+margin: 0 0 12px;
+font-size: clamp(2.1rem, 5vw, 3.2rem);
+line-height: 1.15;
+font-weight: 700;
+}
+.slogan {
+margin: 0 auto;
+max-width: 640px;
+font-size: 1.12rem;
+opacity: 0.95;
+}
+.boutons {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+margin-top: 28px;
+}
+.bouton {
+display: inline-block;
+padding: 11px 22px;
+border-radius: 999px;
+font-weight: 600;
+font-size: 0.97rem;
+text-decoration: none;
+transition: background 0.15s, color 0.15s;
+}
+.bouton-clair { background: 
+#ffffff; color: var(--accent-fonce); }
+.bouton-clair:hover { background: var(--accent-clair); }
+.bouton-contour { border: 2px solid 
+#ffffff; color: 
+#ffffff; padding: 9px 20px; }
+.bouton-contour:hover { background: rgba(255, 255, 255, 0.15); }
+.bouton-plein { background: var(--accent); color: 
+#ffffff; }
+.bouton-plein:hover { background: var(--accent-fonce); }
 
-    /* ---------- Contenu ---------- */
-    main { max-width: 1080px; margin: 0 auto; padding: 36px 16px 24px; }
+/* ---------- Contenu ---------- */
+main { max-width: 1080px; margin: 0 auto; padding: 36px 16px 24px; }
 
-    .message-pdf {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--accent-clair);
-      border-radius: 10px;
-      padding: 14px 20px;
-      margin-bottom: 40px;
-      color: var(--accent-fonce);
-    }
-    .message-pdf .pastille {
-      flex: none;
-      background: var(--accent);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.8rem;
-      border-radius: 6px;
-      padding: 4px 8px;
-      letter-spacing: 0.04em;
-    }
-    .message-pdf p { margin: 0; }
+.message-pdf {
+display: flex;
+align-items: center;
+gap: 14px;
+background: var(--accent-clair);
+border-radius: 10px;
+padding: 14px 20px;
+margin-bottom: 40px;
+color: var(--accent-fonce);
+}
+.message-pdf .pastille {
+flex: none;
+background: var(--accent);
+color: 
+#ffffff;
+font-weight: 700;
+font-size: 0.8rem;
+border-radius: 6px;
+padding: 4px 8px;
+letter-spacing: 0.04em;
+}
+.message-pdf p { margin: 0; }
 
-    section { margin-bottom: 48px; }
-    h2 {
-      font-size: 1.7rem;
-      margin: 0 0 20px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--accent);
-    }
-    h3.mois {
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--doux);
-      margin: 28px 0 12px;
-    }
+section { margin-bottom: 48px; }
+h2 {
+font-size: 1.7rem;
+margin: 0 0 20px;
+padding-bottom: 8px;
+border-bottom: 2px solid var(--accent);
+}
+h3.mois {
+font-family: "Inter", system-ui, sans-serif;
+font-size: 0.85rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.08em;
+color: var(--doux);
+margin: 28px 0 12px;
+}
 
-    /* ---------- Cartes d'articles ---------- */
-    .grille {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .carte {
-      display: flex;
-      flex-direction: column;
-      background: var(--carte);
-      border: 1px solid var(--bordure);
-      border-radius: 12px;
-      overflow: hidden;
-      transition: box-shadow 0.15s, transform 0.15s;
-    }
-    .carte:hover { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); transform: translateY(-2px); }
-    .carte-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--accent-clair); }
-    .carte-corps { display: flex; flex-direction: column; flex: 1; padding: 20px 22px 22px; }
-    .infos {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px 12px;
-      font-size: 0.85rem;
-      color: var(--doux);
-      margin-bottom: 8px;
-    }
-    .theme {
-      background: var(--accent-clair);
-      color: var(--accent-fonce);
-      font-weight: 600;
-      border-radius: 999px;
-      padding: 2px 10px;
-    }
-    .compteur:not(:empty) { color: var(--accent-fonce); font-weight: 500; }
-    .titre-article {
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.3;
-      margin: 0 0 10px;
-      color: var(--texte);
-    }
-    .resume { margin: 0 0 18px; color: #3c4043; font-size: 0.98rem; }
-    .carte .bouton { align-self: flex-start; margin-top: auto; }
+/* ---------- Cartes d'articles ---------- */
+.grille {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 20px;
+}
+.carte {
+display: flex;
+flex-direction: column;
+background: var(--carte);
+border: 1px solid var(--bordure);
+border-radius: 12px;
+overflow: hidden;
+transition: box-shadow 0.15s, transform 0.15s;
+}
+.carte:hover { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); transform: translateY(-2px); }
+.carte-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--accent-clair); }
+.carte-corps { display: flex; flex-direction: column; flex: 1; padding: 20px 22px 22px; }
+.infos {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 6px 12px;
+font-size: 0.85rem;
+color: var(--doux);
+margin-bottom: 8px;
+}
+.theme {
+background: var(--accent-clair);
+color: var(--accent-fonce);
+font-weight: 600;
+border-radius: 999px;
+padding: 2px 10px;
+}
+.titre-article {
+font-size: 1.25rem;
+font-weight: 600;
+line-height: 1.3;
+margin: 0 0 10px;
+color: var(--texte);
+}
+.resume { margin: 0 0 18px; color: 
+#3c4043; font-size: 0.98rem; }
+.carte .bouton { align-self: flex-start; margin-top: auto; }
 
-    /* Article à la une : plus grand */
-    .une { margin-bottom: 20px; }
-    .une .carte-image { aspect-ratio: auto; height: 100%; min-height: 240px; }
-    .une .carte-corps { padding: 28px 32px 30px; }
-    .une .titre-article { font-size: clamp(1.45rem, 3vw, 1.9rem); }
-    .une .resume { font-size: 1.05rem; }
-    .une.avec-image { display: grid; grid-template-columns: 2fr 3fr; }
-    .etiquette-une {
-      display: inline-block;
-      align-self: flex-start;
-      background: var(--accent);
-      color: #ffffff;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border-radius: 4px;
-      padding: 3px 9px;
-      margin-bottom: 12px;
-    }
-    @media (max-width: 700px) {
-      .une.avec-image { display: flex; }
-      .une .carte-image { min-height: 0; aspect-ratio: 16 / 9; }
-      .une .carte-corps { padding: 20px 22px 22px; }
-      .bandeau { padding: 52px 16px 44px; }
-    }
+/* Article à la une : plus grand */
+.une { margin-bottom: 20px; }
+.une .carte-image { aspect-ratio: auto; height: 100%; min-height: 240px; }
+.une .carte-corps { padding: 28px 32px 30px; }
+.une .titre-article { font-size: clamp(1.45rem, 3vw, 1.9rem); }
+.une .resume { font-size: 1.05rem; }
+.une.avec-image { display: grid; grid-template-columns: 2fr 3fr; }
+.etiquette-une {
+display: inline-block;
+align-self: flex-start;
+background: var(--accent);
+color: 
+#ffffff;
+font-size: 0.78rem;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+border-radius: 4px;
+padding: 3px 9px;
+margin-bottom: 12px;
+}
+@media (max-width: 700px) {
+.une.avec-image { display: flex; }
+.une .carte-image { min-height: 0; aspect-ratio: 16 / 9; }
+.une .carte-corps { padding: 20px 22px 22px; }
+.bandeau { padding: 52px 16px 44px; }
+}
 
-    .vide { color: var(--doux); font-style: italic; }
+.vide { color: var(--doux); font-style: italic; }
 
-    /* ---------- Pied de page ---------- */
-    footer {
-      border-top: 1px solid var(--bordure);
-      text-align: center;
-      color: var(--doux);
-      font-size: 0.9rem;
-      padding: 28px 16px 40px;
-    }
-    footer p { margin: 4px 0; }
-  </style>
+/* ---------- Pied de page ---------- */
+footer {
+border-top: 1px solid var(--bordure);
+text-align: center;
+color: var(--doux);
+font-size: 0.9rem;
+padding: 28px 16px 40px;
+}
+footer p { margin: 4px 0; }
+</style>
 </head>
 <body>
 
-  <header class="bandeau">
-    <div class="bandeau-contenu">
-      <h1>Mes Analyses du Quartier</h1>
-      <p class="slogan">Retrouvez toutes les notes en téléchargement sur cette page,
-         ainsi que sur ma chaîne WhatsApp «&nbsp;Mes Analyses du Quartier&nbsp;».</p>
-      <nav class="boutons">
-        <a class="bouton bouton-clair" href="apropos.html">À propos</a>
-        <a class="bouton bouton-clair" href="auteur.html">Découvrir l’auteur</a>
-        <a class="bouton bouton-contour"
-           href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
-           target="_blank" rel="noopener">Suivre la chaîne WhatsApp</a>
-      </nav>
-    </div>
-  </header>
+<header class="bandeau">
+<div class="bandeau-contenu">
+<h1>Mes Analyses du Quartier</h1>
+<p class="slogan">Retrouvez toutes les notes en téléchargement sur cette page,
+   ainsi que sur ma chaîne WhatsApp «&nbsp;Mes Analyses du Quartier&nbsp;».</p>
+<nav class="boutons">
+  <a class="bouton bouton-clair" href="apropos.html">À propos</a>
+  <a class="bouton bouton-clair" href="auteur.html">Découvrir l’auteur</a>
+  <a class="bouton bouton-contour"
+     href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
+     target="_blank" rel="noopener">Suivre la chaîne WhatsApp</a>
+</nav>
+</div>
+</header>
 
-  <main>
-    <div class="message-pdf">
-      <span class="pastille">PDF</span>
-      <p>Vous pouvez télécharger les articles en PDF ici. Cliquez sur
-         «&nbsp;Lire la note&nbsp;» pour l’ouvrir ou l’enregistrer.</p>
-    </div>
+<main>
+<div class="message-pdf">
+<span class="pastille">PDF</span>
+<p>Vous pouvez télécharger les articles en PDF ici. Cliquez sur
+   «&nbsp;Lire la note&nbsp;» pour l’ouvrir ou l’enregistrer.</p>
+</div>
 
-    <section>
-      <h2 id="titre-recents">Notes du dernier mois</h2>
-      <div id="recents"></div>
-    </section>
+<section>
+<h2 id="titre-recents">Note du dernier mois</h2>
+<div id="recents"></div>
+</section>
 
-    <section>
-      <h2>Anciennes notes</h2>
-      <div id="anciens"></div>
-    </section>
-  </main>
+<section>
+<h2>Anciens Notes</h2>
+<div id="anciens"></div>
+</section>
+</main>
 
-  <footer>
-    <p>© Mes Analyses du Quartier · Louis Kadryl Yembi-Yembi</p>
-    <p>
-      <a href="apropos.html">À propos</a> ·
-      <a href="auteur.html">L’auteur</a> ·
-      <a href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
-         target="_blank" rel="noopener">Chaîne WhatsApp</a>
-    </p>
-  </footer>
+<footer>
+<p>© Mes Analyses du Quartier · Louis Kadryl Yembi-Yembi</p>
+<p>
+<a href="apropos.html">À propos</a> ·
+<a href="auteur.html">L’auteur</a> ·
+<a href="https://whatsapp.com/channel/0029VaxTWa0CxoAzntrsuu1U"
+   target="_blank" rel="noopener">Chaîne WhatsApp</a>
+</p>
+</footer>
 
-  <!-- La liste des articles est dans le fichier articles.js -->
-  <script src="articles.js"></script>
-  <script>
-    // Ce code affiche et classe les notes automatiquement.
-    // Tu n'as pas besoin de le modifier.
-    const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
-                  "août", "septembre", "octobre", "novembre", "décembre"];
+<!-- La liste des articles est dans le fichier articles.js -->
+<script src="articles.js"></script>
+<script>
+// Ce code affiche et classe les articles automatiquement.
+// Tu n'as pas besoin de le modifier.
+const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
+            "août", "septembre", "octobre", "novembre", "décembre"];
 
-    function nomDuMois(date) {
-      const [annee, mois] = date.split("-");
-      return MOIS[Number(mois) - 1] + " " + annee;
-    }
+function nomDuMois(date) {
+const [annee, mois] = date.split("-");
+return MOIS[Number(mois) - 1] + " " + annee;
+}
 
-    function dateEnFrancais(date) {
-      const [annee, mois, jour] = date.split("-");
-      return Number(jour) + " " + MOIS[Number(mois) - 1] + " " + annee;
-    }
+function dateEnFrancais(date) {
+const [annee, mois, jour] = date.split("-");
+return Number(jour) + " " + MOIS[Number(mois) - 1] + " " + annee;
+}
 
-    function element(balise, classe, texte) {
-      const el = document.createElement(balise);
-      if (classe) el.className = classe;
-      if (texte) el.textContent = texte;
-      return el;
-    }
+function element(balise, classe, texte) {
+const el = document.createElement(balise);
+if (classe) el.className = classe;
+if (texte) el.textContent = texte;
+return el;
+}
 
-    /* ==========================================================
-       COMPTEUR DE TÉLÉCHARGEMENTS
-       Service gratuit Abacus. Le nom ci-dessous est ton espace
-       personnel : ne le change plus une fois le site en ligne,
-       sinon les compteurs repartent de zéro.
-       Pour désactiver le compteur, mets COMPTEUR_ACTIF à false.
-       ========================================================== */
-    const COMPTEUR_ACTIF = true;
-    const COMPTEUR_ESPACE = "mesanalysesduquartier-louisye";
-    const COMPTEUR_API = "https://abacus.jasoncameron.dev";
+function carteArticle(article, aLaUne) {
+const carte = element("article", "carte" + (aLaUne ? " une" : ""));
 
-    function cleCompteur(article) {
-      return article.fichier
-        .replace(/^articles\//, "")
-        .replace(/\.pdf$/i, "")
-        .replace(/[^a-zA-Z0-9_-]/g, "-")
-        .slice(0, 60);
-    }
+if (article.image) {
+  const img = element("img", "carte-image");
+  img.src = encodeURI(article.image);
+  img.alt = "";
+  img.loading = "lazy";
+  img.onerror = () => { img.remove(); carte.classList.remove("avec-image"); };
+  carte.appendChild(img);
+  carte.classList.add("avec-image");
+}
 
-    function texteCompteur(n) {
-      return n + (n > 1 ? " téléchargements" : " téléchargement");
-    }
+const corps = element("div", "carte-corps");
+if (aLaUne) corps.appendChild(element("span", "etiquette-une", "À la une"));
 
-    // Les appels sont espacés pour rester sous la limite du service.
-    let fileAttente = Promise.resolve();
-    function aLaQueue(action) {
-      fileAttente = fileAttente
-        .then(action)
-        .catch(() => {})
-        .then(() => new Promise(r => setTimeout(r, 200)));
-      return fileAttente;
-    }
+const infos = element("div", "infos");
+if (article.theme) infos.appendChild(element("span", "theme", article.theme));
+infos.appendChild(element("span", "", dateEnFrancais(article.date)));
+if (article.pages) {
+  const nb = Number(article.pages);
+  infos.appendChild(element("span", "", "· " + nb + (nb > 1 ? " pages" : " page")));
+}
+corps.appendChild(infos);
 
-    function litCompteur(cle, affichage) {
-      aLaQueue(() =>
-        fetch(COMPTEUR_API + "/get/" + COMPTEUR_ESPACE + "/" + cle)
-          .then(r => (r.ok ? r.json() : null))
-          .then(d => {
-            if (d && typeof d.value === "number" && d.value > 0) {
-              affichage.textContent = "· " + texteCompteur(d.value);
-            }
-          })
-      );
-    }
+corps.appendChild(element("h3", "titre-article", article.titre));
+if (article.resume) corps.appendChild(element("p", "resume", article.resume));
 
-    function incrementeCompteur(cle, affichage) {
-      // une seule fois par note et par visite
-      try {
-        if (sessionStorage.getItem("dl-" + cle)) return;
-        sessionStorage.setItem("dl-" + cle, "1");
-      } catch (e) { /* navigation privée : on continue */ }
+const lien = element("a", "bouton bouton-plein", "Lire la note (PDF)");
+lien.href = encodeURI(article.fichier);
+lien.target = "_blank";
+lien.rel = "noopener";
+corps.appendChild(lien);
 
-      aLaQueue(() =>
-        fetch(COMPTEUR_API + "/hit/" + COMPTEUR_ESPACE + "/" + cle)
-          .then(r => (r.ok ? r.json() : null))
-          .then(d => {
-            if (d && typeof d.value === "number") {
-              affichage.textContent = "· " + texteCompteur(d.value);
-            }
-          })
-      );
-    }
+carte.appendChild(corps);
+return carte;
+}
 
-    function carteArticle(article, aLaUne) {
-      const carte = element("article", "carte" + (aLaUne ? " une" : ""));
+const zoneRecents = document.getElementById("recents");
+const zoneAnciens = document.getElementById("anciens");
 
-      if (article.image) {
-        const img = element("img", "carte-image");
-        img.src = encodeURI(article.image);
-        img.alt = "";
-        img.loading = "lazy";
-        img.onerror = () => { img.remove(); carte.classList.remove("avec-image"); };
-        carte.appendChild(img);
-        carte.classList.add("avec-image");
+if (typeof ARTICLES === "undefined") {
+zoneRecents.appendChild(element("p", "vide",
+  "Le fichier articles.js contient une erreur : vérifie les virgules et les guillemets."));
+} else {
+const tries = [...ARTICLES].sort((a, b) => b.date.localeCompare(a.date));
+
+if (tries.length === 0) {
+  zoneRecents.appendChild(element("p", "vide", "Les premiers articles arrivent très vite."));
+  zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciens articles."));
+} else {
+  // Le « dernier mois » = le mois de l'article le plus récent
+  const dernierMois = tries[0].date.slice(0, 7);
+  document.getElementById("titre-recents").textContent =
+    "Articles du dernier mois (" + nomDuMois(tries[0].date) + ")";
+
+  const recents = tries.filter(a => a.date.slice(0, 7) === dernierMois);
+  const anciens = tries.filter(a => a.date.slice(0, 7) !== dernierMois);
+
+  // Le plus récent en grand, les autres du même mois en grille
+  zoneRecents.appendChild(carteArticle(recents[0], true));
+  if (recents.length > 1) {
+    const grille = element("div", "grille");
+    recents.slice(1).forEach(a => grille.appendChild(carteArticle(a, false)));
+    zoneRecents.appendChild(grille);
+  }
+
+  if (anciens.length === 0) {
+    zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciens articles."));
+  } else {
+    let moisEnCours = "";
+    let grille = null;
+    anciens.forEach(a => {
+      const mois = a.date.slice(0, 7);
+      if (mois !== moisEnCours) {
+        moisEnCours = mois;
+        zoneAnciens.appendChild(element("h3", "mois", nomDuMois(a.date)));
+        grille = element("div", "grille");
+        zoneAnciens.appendChild(grille);
       }
-
-      const corps = element("div", "carte-corps");
-      if (aLaUne) corps.appendChild(element("span", "etiquette-une", "À la une"));
-
-      const infos = element("div", "infos");
-      if (article.theme) infos.appendChild(element("span", "theme", article.theme));
-      infos.appendChild(element("span", "", dateEnFrancais(article.date)));
-      if (article.pages) {
-        const nb = Number(article.pages);
-        infos.appendChild(element("span", "", "· " + nb + (nb > 1 ? " pages" : " page")));
-      }
-      const compteur = element("span", "compteur", "");
-      infos.appendChild(compteur);
-      corps.appendChild(infos);
-
-      corps.appendChild(element("h3", "titre-article", article.titre));
-      if (article.resume) corps.appendChild(element("p", "resume", article.resume));
-
-      const lien = element("a", "bouton bouton-plein", "Lire la note (PDF)");
-      lien.href = encodeURI(article.fichier);
-      lien.target = "_blank";
-      lien.rel = "noopener";
-      corps.appendChild(lien);
-
-      if (COMPTEUR_ACTIF) {
-        const cle = cleCompteur(article);
-        litCompteur(cle, compteur);
-        lien.addEventListener("click", () => incrementeCompteur(cle, compteur));
-      }
-
-      carte.appendChild(corps);
-      return carte;
-    }
-
-    const zoneRecents = document.getElementById("recents");
-    const zoneAnciens = document.getElementById("anciens");
-
-    if (typeof ARTICLES === "undefined") {
-      zoneRecents.appendChild(element("p", "vide",
-        "Le fichier articles.js contient une erreur : vérifie les virgules et les guillemets."));
-    } else {
-      const tries = [...ARTICLES].sort((a, b) => b.date.localeCompare(a.date));
-
-      if (tries.length === 0) {
-        zoneRecents.appendChild(element("p", "vide", "Les premières notes arrivent très vite."));
-        zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciennes notes."));
-      } else {
-        // Le « dernier mois » = le mois de la note la plus récente
-        const dernierMois = tries[0].date.slice(0, 7);
-        document.getElementById("titre-recents").textContent =
-          "Notes du dernier mois (" + nomDuMois(tries[0].date) + ")";
-
-        const recents = tries.filter(a => a.date.slice(0, 7) === dernierMois);
-        const anciens = tries.filter(a => a.date.slice(0, 7) !== dernierMois);
-
-        // La plus récente en grand, les autres du même mois en grille
-        zoneRecents.appendChild(carteArticle(recents[0], true));
-        if (recents.length > 1) {
-          const grille = element("div", "grille");
-          recents.slice(1).forEach(a => grille.appendChild(carteArticle(a, false)));
-          zoneRecents.appendChild(grille);
-        }
-
-        if (anciens.length === 0) {
-          zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciennes notes."));
-        } else {
-          let moisEnCours = "";
-          let grille = null;
-          anciens.forEach(a => {
-            const mois = a.date.slice(0, 7);
-            if (mois !== moisEnCours) {
-              moisEnCours = mois;
-              zoneAnciens.appendChild(element("h3", "mois", nomDuMois(a.date)));
-              grille = element("div", "grille");
-              zoneAnciens.appendChild(grille);
-            }
-            grille.appendChild(carteArticle(a, false));
-          });
-        }
-      }
-    }
-  </script>
+      grille.appendChild(carteArticle(a, false));
+    });
+  }
+}
+}
+</script>
 
 </body>
 </html>
