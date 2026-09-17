@@ -76,4 +76,10 @@ const ARTICLES = [
     fichier: "articles/2025-10-12 -Donnees-personnelles",
     resume: "L’affichage de données personnelles dans les bureaux de vote au Gabon expose les citoyens à l’usurpation d’identité. Cette note examine les failles d’application de la loi et propose sept mesures concrètes pour mieux protéger ces données."
   },
+  {
+    titre: "Le Centre International des Mangroves : Une promesse de plus pour des racines déjà noyées",
+    date: "2025-10-24",
+    fichier: "articles/24-10-2025-CIM-mangroves.pdf",
+    resume: "Le projet d’adhésion du Gabon au Centre international des mangroves soulève une question : quels moyens pour traduire cet engagement en actions concrètes ? Cette note interroge le risque d’une nouvelle institution sans impact réel sur la protection des mangroves."
+  },
 ];
