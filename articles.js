@@ -28,4 +28,10 @@ const ARTICLES = [
     fichier: "articles/2025-01-07-adressage-libreville.pdf",
     resume: "Malgré plusieurs relances, l’adressage de Libreville reste à l’arrêt, faute notamment d’une véritable base de données d’adresses. Cette note analyse les échecs passés, souligne la nécessité d’un référentiel géographique et propose un projet chiffré pour le Grand Libreville."
   },
+  {
+    titre: "La Contribution Foncière Unique : Un impôt qui ne touche qu'une minorité, dans un pays où l'État n'arrive pas à régulariser le foncier des autres",
+    date: "2025-04-22",
+    fichier: "articles/2025-04-22-contribution-fonciere-unique.pdf",
+    resume: "Limitée aux détenteurs d’un titre foncier, la CFU peine à financer les communes gabonaises. Cette note analyse ses limites et propose un référentiel géographique partagé entre cadastre, urbanisme et impôts pour élargir durablement la base fiscale."
+  },
 ];
