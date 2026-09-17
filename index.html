@@ -183,6 +183,7 @@
       border-radius: 999px;
       padding: 2px 10px;
     }
+    .compteur:not(:empty) { color: var(--accent-fonce); font-weight: 500; }
     .titre-article {
       font-size: 1.25rem;
       font-weight: 600;
@@ -258,12 +259,12 @@
     </div>
 
     <section>
-      <h2 id="titre-recents">Note du dernier mois</h2>
+      <h2 id="titre-recents">Notes du dernier mois</h2>
       <div id="recents"></div>
     </section>
 
     <section>
-      <h2>Anciens Notes</h2>
+      <h2>Anciennes notes</h2>
       <div id="anciens"></div>
     </section>
   </main>
@@ -281,7 +282,7 @@
   <!-- La liste des articles est dans le fichier articles.js -->
   <script src="articles.js"></script>
   <script>
-    // Ce code affiche et classe les articles automatiquement.
+    // Ce code affiche et classe les notes automatiquement.
     // Tu n'as pas besoin de le modifier.
     const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
                   "août", "septembre", "octobre", "novembre", "décembre"];
@@ -301,6 +302,69 @@
       if (classe) el.className = classe;
       if (texte) el.textContent = texte;
       return el;
+    }
+
+    /* ==========================================================
+       COMPTEUR DE TÉLÉCHARGEMENTS
+       Service gratuit Abacus. Le nom ci-dessous est ton espace
+       personnel : ne le change plus une fois le site en ligne,
+       sinon les compteurs repartent de zéro.
+       Pour désactiver le compteur, mets COMPTEUR_ACTIF à false.
+       ========================================================== */
+    const COMPTEUR_ACTIF = true;
+    const COMPTEUR_ESPACE = "mesanalysesduquartier-louisye";
+    const COMPTEUR_API = "https://abacus.jasoncameron.dev";
+
+    function cleCompteur(article) {
+      return article.fichier
+        .replace(/^articles\//, "")
+        .replace(/\.pdf$/i, "")
+        .replace(/[^a-zA-Z0-9_-]/g, "-")
+        .slice(0, 60);
+    }
+
+    function texteCompteur(n) {
+      return n + (n > 1 ? " téléchargements" : " téléchargement");
+    }
+
+    // Les appels sont espacés pour rester sous la limite du service.
+    let fileAttente = Promise.resolve();
+    function aLaQueue(action) {
+      fileAttente = fileAttente
+        .then(action)
+        .catch(() => {})
+        .then(() => new Promise(r => setTimeout(r, 200)));
+      return fileAttente;
+    }
+
+    function litCompteur(cle, affichage) {
+      aLaQueue(() =>
+        fetch(COMPTEUR_API + "/get/" + COMPTEUR_ESPACE + "/" + cle)
+          .then(r => (r.ok ? r.json() : null))
+          .then(d => {
+            if (d && typeof d.value === "number" && d.value > 0) {
+              affichage.textContent = "· " + texteCompteur(d.value);
+            }
+          })
+      );
+    }
+
+    function incrementeCompteur(cle, affichage) {
+      // une seule fois par note et par visite
+      try {
+        if (sessionStorage.getItem("dl-" + cle)) return;
+        sessionStorage.setItem("dl-" + cle, "1");
+      } catch (e) { /* navigation privée : on continue */ }
+
+      aLaQueue(() =>
+        fetch(COMPTEUR_API + "/hit/" + COMPTEUR_ESPACE + "/" + cle)
+          .then(r => (r.ok ? r.json() : null))
+          .then(d => {
+            if (d && typeof d.value === "number") {
+              affichage.textContent = "· " + texteCompteur(d.value);
+            }
+          })
+      );
     }
 
     function carteArticle(article, aLaUne) {
@@ -326,6 +390,8 @@
         const nb = Number(article.pages);
         infos.appendChild(element("span", "", "· " + nb + (nb > 1 ? " pages" : " page")));
       }
+      const compteur = element("span", "compteur", "");
+      infos.appendChild(compteur);
       corps.appendChild(infos);
 
       corps.appendChild(element("h3", "titre-article", article.titre));
@@ -336,6 +402,12 @@
       lien.target = "_blank";
       lien.rel = "noopener";
       corps.appendChild(lien);
+
+      if (COMPTEUR_ACTIF) {
+        const cle = cleCompteur(article);
+        litCompteur(cle, compteur);
+        lien.addEventListener("click", () => incrementeCompteur(cle, compteur));
+      }
 
       carte.appendChild(corps);
       return carte;
@@ -351,18 +423,18 @@
       const tries = [...ARTICLES].sort((a, b) => b.date.localeCompare(a.date));
 
       if (tries.length === 0) {
-        zoneRecents.appendChild(element("p", "vide", "Les premiers articles arrivent très vite."));
-        zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciens articles."));
+        zoneRecents.appendChild(element("p", "vide", "Les premières notes arrivent très vite."));
+        zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciennes notes."));
       } else {
-        // Le « dernier mois » = le mois de l'article le plus récent
+        // Le « dernier mois » = le mois de la note la plus récente
         const dernierMois = tries[0].date.slice(0, 7);
         document.getElementById("titre-recents").textContent =
-          "Articles du dernier mois (" + nomDuMois(tries[0].date) + ")";
+          "Notes du dernier mois (" + nomDuMois(tries[0].date) + ")";
 
         const recents = tries.filter(a => a.date.slice(0, 7) === dernierMois);
         const anciens = tries.filter(a => a.date.slice(0, 7) !== dernierMois);
 
-        // Le plus récent en grand, les autres du même mois en grille
+        // La plus récente en grand, les autres du même mois en grille
         zoneRecents.appendChild(carteArticle(recents[0], true));
         if (recents.length > 1) {
           const grille = element("div", "grille");
@@ -371,7 +443,7 @@
         }
 
         if (anciens.length === 0) {
-          zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciens articles."));
+          zoneAnciens.appendChild(element("p", "vide", "Pas encore d’anciennes notes."));
         } else {
           let moisEnCours = "";
           let grille = null;
