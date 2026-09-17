@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes analyses du quartier</title>
+  <meta name="description" content="Les articles et analyses de la chaîne Mes analyses du quartier.">
+  <style>
+    :root {
+      --fond: #f7f5f0;
+      --carte: #ffffff;
+      --texte: #222222;
+      --doux: #666666;
+      --accent: #1f6f5c;
+      --accent-clair: #e4f0ec;
+      --bordure: #e2ded5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--fond);
+      color: var(--texte);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 48px 16px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; font-size: 2.2rem; }
+    header p { margin: 0; opacity: 0.9; }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 16px; }
+    section { margin-bottom: 40px; }
+    h2 {
+      font-size: 1.4rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+    }
+    h3 {
+      font-size: 1.05rem;
+      color: var(--doux);
+      margin: 24px 0 8px;
+      text-transform: capitalize;
+    }
+    .articles { list-style: none; padding: 0; margin: 0; }
+    .articles li {
+      background: var(--carte);
+      border: 1px solid var(--bordure);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+    .recents li {
+      border-left: 5px solid var(--accent);
+      background: var(--accent-clair);
+    }
+    .articles a {
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+    .articles a:hover { text-decoration: underline; }
+    .date { display: block; color: var(--doux); font-size: 0.9rem; }
+    .resume { margin: 6px 0 0; }
+    .vide { color: var(--doux); font-style: italic; }
+    footer {
+      text-align: center;
+      color: var(--doux);
+      font-size: 0.9rem;
+      padding: 24px 16px 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mes analyses du quartier</h1>
+    <p>Les articles de ma chaîne, à lire et à télécharger</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>À propos</h2>
+      <p>Bienvenue ! Sur ce site, je publie mes analyses sur la vie du quartier.
+         Chaque article est disponible en PDF.</p>
+    </section>
+
+    <section>
+      <h2 id="titre-recents">Articles du dernier mois</h2>
+      <ul class="articles recents" id="recents"></ul>
+    </section>
+
+    <section>
+      <h2>Anciens articles</h2>
+      <div id="anciens"></div>
+    </section>
+  </main>
+
+  <footer>
+    © Mes analyses du quartier
+  </footer>
+
+  <!-- La liste des articles est dans le fichier articles.js -->
+  <script src="articles.js"></script>
+  <script>
+    // Ce code classe les articles automatiquement.
+    // Tu n'as pas besoin de le modifier.
+    const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
+                  "août", "septembre", "octobre", "novembre", "décembre"];
+
+    function nomDuMois(date) {
+      const [annee, mois] = date.split("-");
+      return MOIS[Number(mois) - 1] + " " + annee;
+    }
+
+    function dateEnFrancais(date) {
+      const [annee, mois, jour] = date.split("-");
+      return Number(jour) + " " + MOIS[Number(mois) - 1] + " " + annee;
+    }
+
+    function carteArticle(article) {
+      const li = document.createElement("li");
+
+      const date = document.createElement("span");
+      date.className = "date";
+      date.textContent = dateEnFrancais(article.date);
+      li.appendChild(date);
+
+      const lien = document.createElement("a");
+      lien.href = encodeURI(article.fichier);
+      lien.target = "_blank";
+      lien.textContent = article.titre;
+      li.appendChild(lien);
+
+      if (article.resume) {
+        const resume = document.createElement("p");
+        resume.className = "resume";
+        resume.textContent = article.resume;
+        li.appendChild(resume);
+      }
+      return li;
+    }
+
+    function messageVide(texte) {
+      const p = document.createElement("p");
+      p.className = "vide";
+      p.textContent = texte;
+      return p;
+    }
+
+    const zoneRecents = document.getElementById("recents");
+    const zoneAnciens = document.getElementById("anciens");
+
+    if (typeof ARTICLES === "undefined") {
+      zoneRecents.replaceWith(messageVide(
+        "Le fichier articles.js contient une erreur : vérifie les virgules et les guillemets."));
+    } else {
+      // Du plus récent au plus ancien
+      const tries = [...ARTICLES].sort((a, b) => b.date.localeCompare(a.date));
+
+      if (tries.length === 0) {
+        zoneRecents.replaceWith(messageVide("Les premiers articles arrivent très vite."));
+        zoneAnciens.appendChild(messageVide("Pas encore d'anciens articles."));
+      } else {
+        // Le « dernier mois » = le mois de l'article le plus récent
+        const dernierMois = tries[0].date.slice(0, 7);
+        document.getElementById("titre-recents").textContent =
+          "Articles du dernier mois (" + nomDuMois(tries[0].date) + ")";
+
+        const recents = tries.filter(a => a.date.slice(0, 7) === dernierMois);
+        const anciens = tries.filter(a => a.date.slice(0, 7) !== dernierMois);
+
+        recents.forEach(a => zoneRecents.appendChild(carteArticle(a)));
+
+        if (anciens.length === 0) {
+          zoneAnciens.appendChild(messageVide("Pas encore d'anciens articles."));
+        } else {
+          // Anciens articles regroupés par mois
+          let moisEnCours = "";
+          let liste = null;
+          anciens.forEach(a => {
+            const mois = a.date.slice(0, 7);
+            if (mois !== moisEnCours) {
+              moisEnCours = mois;
+              const titre = document.createElement("h3");
+              titre.textContent = nomDuMois(a.date);
+              zoneAnciens.appendChild(titre);
+              liste = document.createElement("ul");
+              liste.className = "articles";
+              zoneAnciens.appendChild(liste);
+            }
+            liste.appendChild(carteArticle(a));
+          });
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
