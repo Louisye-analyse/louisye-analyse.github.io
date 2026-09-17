@@ -112,4 +112,10 @@ const ARTICLES = [
     fichier: "articles/22026-08-24-Potasse-Mayumba-un-an-apres.pdf",
     resume: "Malgré l’accord annoncé de 500 millions de dollars, le projet de potasse de Mayumba reste au stade des études, sans financement de construction bouclé ni permis d’exploitation. Cette note analyse l’écart entre les annonces et l’avancement réel du projet."
   },
+  {
+    titre: "Quatre-vingts mètres de flou : Déguerpissements autour de la Cité de la Démocratie : sur quelle base juridique, pour quel projet, et à quel prix humain ?",
+    date: "2026-08-26",
+    fichier: "articles/2026-08-26-Deguerpissements-Cite-Democratie.pdf",
+    resume: "Autour de la Cité de la Démocratie, une opération de libération d’emprise menace des habitations sans périmètre clairement publié ni garanties d’indemnisation. La consultation tardive des habitants révèle une procédure opaque, à l’approche de la rentrée scolaire."
+  },
 ];
