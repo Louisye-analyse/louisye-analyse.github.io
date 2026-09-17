@@ -94,4 +94,10 @@ const ARTICLES = [
     fichier: "articles/2026-01-29-gestion-des-risques -Inondations.pdf",
     resume: "Les inondations à Libreville révèlent une gestion des risques centrée sur l’urgence et la communication. Malgré des causes connues, les réponses restent ponctuelles, sans prévention durable ni réforme de la gouvernance territoriale."
   },
+   {
+    titre: "Régularisation foncière massive (RFM) : Sécurité juridique ou piège à risques naturels ?",
+    date: "2026-02-23",
+    fichier: "articles/2026-02-23-RFM-risques-naturels.pdf",
+    resume: "La régularisation foncière annoncée dans le Grand Libreville promet de sécuriser plus de 5 100 familles, mais risque de légaliser des occupations en zones dangereuses. Sans diagnostic préalable des risques, qui assumera la responsabilité des futurs dommages ?"
+  },
 ];
