@@ -26,6 +26,6 @@ const ARTICLES = [
     titre: "L'adressage à Libreville : Un défi structurel et sociologique, et pourquoi il faut le refonder sur la donnée",
     date: "2025-01-07",
     fichier: "articles/2025-01-07-adressage-libreville.pdf",
-    resume: "Malgré plusieurs relances, l’adressage de Libreville reste à l’arrêt, faute notamment d’une véritable base de données d’adresses. Cette note analyse les échecs passés, souligne la nécessité d’un référentiel géographique et propose un projet chiffré pour le Grand Libreville.."
+    resume: "Malgré plusieurs relances, l’adressage de Libreville reste à l’arrêt, faute notamment d’une véritable base de données d’adresses. Cette note analyse les échecs passés, souligne la nécessité d’un référentiel géographique et propose un projet chiffré pour le Grand Libreville."
   },
 ];
