@@ -79,7 +79,7 @@ const ARTICLES = [
   {
     titre: "La fragilité de nos données personnelles : Un constat alarmant après la campagne électorale, et ce qu'il faudrait faire pour y remédier",
     date: "2025-10-12",
-    fichier: "articles/2025-10-12-Donnees-personnelles",
+    fichier: "articles/2025-10-12-Donnees-personnelles.pdf",
     resume: "L’affichage de données personnelles dans les bureaux de vote au Gabon expose les citoyens à l’usurpation d’identité. Cette note examine les failles d’application de la loi et propose sept mesures concrètes pour mieux protéger ces données."
   },
   {
