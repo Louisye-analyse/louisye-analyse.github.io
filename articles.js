@@ -115,7 +115,7 @@ const ARTICLES = [
   {
     titre: "Potasse de Mayumba : Que devient vraiment le projet signé en fanfare à Washington ?",
     date: "2026-08-24",
-    fichier: "articles/22026-08-24-Potasse-Mayumba-un-an-apres.pdf",
+    fichier: "articles/2026-08-24-Potasse-Mayumba-un-an-apres.pdf",
     resume: "Malgré l’accord annoncé de 500 millions de dollars, le projet de potasse de Mayumba reste au stade des études, sans financement de construction bouclé ni permis d’exploitation. Cette note analyse l’écart entre les annonces et l’avancement réel du projet."
   },
   {
