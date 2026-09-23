@@ -130,4 +130,10 @@ const ARTICLES = [
     fichier: "articles/2026-09-13-Boite-Outils-DGAT.pdf",
     resume: "Le Gabon dispose de 14 outils d’aménagement du territoire, mais leur portée reste limitée par des bases juridiques insuffisantes, des documents peu accessibles et des collectivités sans moyens. Cette note examine l’écart entre les outils annoncés et leur application réelle."
   },
+  {
+    titre: "On ouvre des routes, personne n'est chargé de les mettre sur la carte: Géolocalisation, toponymie et adressage, le maillon manquant de la transformation urbaine gabonaise",
+    date: "2026-09-23",
+    fichier: "articles/2026-09-23-Geolocalisation-adressage.pdf",
+    resume: "Le 20 septembre 2026, sur son compte TikTok, Chamberland Moukouama alertait sur l’urgence de mettre à jour la géolocalisation du Gabon. Le territoire évolue plus vite que ses cartes numériques. Malgré le Plan national géomatique lancé en 2013, aucun organisme ne semble clairement chargé de cette actualisation. Cette note propose six mesures pour combler ce vide."
+  },
 ];
