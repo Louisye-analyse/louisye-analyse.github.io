@@ -138,7 +138,7 @@ const ARTICLES = [
   },
   {
     titre: "On a visité tous les chantiers de Port-Gentil pendant deux semaines, sauf celui des inondations : Inondation pluviale, submersion marine et érosion du trait de côte, les grands absents de la tournée présidentielle ",
-    date: "2026-09-23",
+    date: "2026-10-18",
     fichier: "articles/2026-10-18-Port-Gentil-Dans-eau-aménagement.pdf",
     resume: "La tournée présidentielle à Port-Gentil a mis en avant de nombreux chantiers, mais laissé de côté les inondations, la submersion marine et l’érosion côtière. Alors que 64 % des plaines sont inondables, proportion qui pourrait atteindre 90 % en 2100 selon cette analyse, une question s’impose : à quoi serviront ces équipements si leurs accès sont sous l’eau ?"
   },
