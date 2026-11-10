@@ -142,4 +142,10 @@ const ARTICLES = [
     fichier: "articles/2026-10-18-Port-Gentil-Dans-eau-aménagement.pdf",
     resume: "La tournée présidentielle à Port-Gentil a mis en avant de nombreux chantiers, mais laissé de côté les inondations, la submersion marine et l’érosion côtière. Alors que 64 % des plaines sont inondables, proportion qui pourrait atteindre 90 % en 2100 selon cette analyse, une question s’impose : à quoi serviront ces équipements si leurs accès sont sous l’eau ?"
   },
+   {
+    titre: "Risques naturels(hydrique) au Gabon :comment passer de la gestion de crise à l'anticipation ? Comment passer à l'adaptation des territoires et de leurs infrastructures ? ",
+    date: "2026-11-10",
+    fichier: "articles/2026-11-10-Risques-hydryque-anticipation.pdf",
+    resume: "Chaque saison des pluies ramène les mêmes quartiers sous l’eau et les mêmes versants en mouvement. Le problème n’est pas l’absence de textes : trois organes de coordination existent depuis 2010 sous la tutelle de l’Intérieur, sans production visible. Cette analyse propose six mesures, à commencer par une carte d’aléa opposable par bassin versant."
+  },
 ];
